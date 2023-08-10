@@ -1,10 +1,6 @@
 #include <stdio.h>
-/**
- * main - Entry point
- *
- * Return: 0
- */
-int main()
+
+int main(void)
 {
     printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(char));
     printf("Size of an int: %lu byte(s)\n", (unsigned long)sizeof(int));

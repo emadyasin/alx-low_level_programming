@@ -1,4 +1,6 @@
 #include <unistd.h>
+
+
 /**
  * main - 101-qoute.c
  * description - Write a C program that prints exactly and that piece of

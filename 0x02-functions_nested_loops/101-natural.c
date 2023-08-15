@@ -1,31 +1,23 @@
 #include <stdio.h>
 
 /**
- * main - prints the first 50 Fibonacci numbers, starting with 1 and 2
- * followed by a new line
- * Return: Always 0 (Success)
+ * main - computes and prints the sum of multiples
+ * of 3 or 5 blow 1024
+ * Return: always 0
  */
 int main(void)
 {
-	long int i, j, k, next;
+	int i, sum;
 
-	j = 1;
+	sum = 0;
 
-	k = 2;
-
-	for (i = 1; i <= 50; ++i)
+	for (i = 0; i < 1024; i++)
 	{
-		if (j != 20365011074)
+		if (1 % 3 == 0  || i % 5 == 0)
 		{
-			printf("%ld, ", j);
-		} else
-		{
-			printf("%ld\n", j);
+			sum += i;
 		}
-		next = j + k;
-		j = k;
-		k = next;
 	}
-
+	printf("%d\n", sum);
 	return (0);
 }

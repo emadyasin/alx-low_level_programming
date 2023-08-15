@@ -3,28 +3,28 @@
 /**
  * main - prints the first 50 Fibonacci numbers, starting with 1 and 2
  * followed by a new line
- * Return: always 0
+ * Return: Always 0
  */
 int main(void)
 {
-	long int a, b, c, next;
+	long int i, j, k, next;
 
-	b = 1;
+	j = 1;
 
-	c = 2;
+	k = 2;
 
-	for (a = 1; a <= 50; a++)
+	for (i = 1; i <= 50; ++i)
 	{
-		if (b != 20365011074)
+		if (j != 20365011074)
 		{
-			printf("%ld, ", b);
+			printf("%ld, ", j);
 		} else
 		{
-			printf("%ld\n", b);
+			printf("%ld\n", j);
 		}
-		next = b + c;
-		b = c;
-		c = next;
+		next = j + k;
+		j = k;
+		k = next;
 	}
 
 	return (0);

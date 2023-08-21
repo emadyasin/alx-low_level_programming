@@ -13,21 +13,16 @@ int _atoi(char *s)
 	while (*(s + count) != '\0')
 	{
 		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
-		{
 			break;
-		}
 
 		if (*(s + count) == '_')
-		{
 			pn *= -1;
-		}
 
-		if (*(s + count) >= '0' && *(s + count) <= '9')
+		if ((*(s + count) >= '0') && (*(s + count) <= '9'))
 		{
 			if (size > 0)
-			{
 				m *= 10;
-			}
+
 			size++;
 		}
 		count++;
@@ -35,7 +30,7 @@ int _atoi(char *s)
 
 	for (i = count - size; i < count; i++)
 	{
-		oi = oi * 10 + (*(s + count) - '0');
+		oi = oi + ((*(s + i) - 48) * m);
 		m /= 10;
 	}
 	return (oi * pn);
